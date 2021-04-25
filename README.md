@@ -1,7 +1,7 @@
 # Tugas-Alpro
 2008561106
 
-6.	#include <stdio.h>
+#include <stdio.h>
 #define tglsekarang 16
 #define blnsekarang 02
 #define thnsekarang 2021
