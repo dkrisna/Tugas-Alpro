@@ -1,0 +1,65 @@
+#include<stdio.h>
+#define makstack 15
+
+int stack[15], natas;
+
+void push(){
+    int x;
+    if(natas>=makstack-1){
+        printf("Stack sudah penuh!\n");
+    }else{
+        printf("Data yang akan ditambahkan: ");
+        scanf("%d", &x);
+        natas++;
+        stack[natas]=x;
+    }
+}
+void pop(){
+    if(natas<=-1){
+        printf("\nStack masih kosong!\n");
+    }else{
+        printf("\nData yang di pop : %d", stack[natas]);
+        natas--;
+    }
+}
+void view(){
+    if(natas<=-1){
+        printf("Stack masih kosong!\n");
+    }else{
+        printf("Data yang tersedia\n");
+        for(int i=natas; i>=0; i--)
+            printf("|%d|",stack[i]);
+    }
+}
+int main(){
+    int plhn;
+
+    natas=-1;
+
+        printf("Program Stack");
+    do{
+        printf("\n1. Push");
+        printf("\n2. Pop");
+        printf("\n3. View");
+        printf("\n4. Exit");
+        printf("\nPilih menu yang tersedia : ");
+        scanf("%d",&plhn);
+        switch(plhn){
+            case 1:
+                push();
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                view();
+                break;
+            case 4:
+                printf("\n-------Terimakasih--------");
+                break;
+            default:
+                printf ("\nPilih menu yang tersedia!\n");
+        }
+    }while(plhn!=4);
+    return 0;
+}
