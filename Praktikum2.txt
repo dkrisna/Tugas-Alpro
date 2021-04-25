@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main ()
+{
+    int n, x, x1=0, x2=1, jml=1, counterL=0;
+
+    printf ("Masukkan Jumlah Bilangan Fibonacci = ");
+    scanf ("%d", &n);
+
+    printf ("|%d|", x1);
+    printf ("|%d|", x2);
+    for (counterL; counterL<n-2; counterL++){
+        x=x1+x2;
+        printf ("|%d|", x);
+        jml = jml + x;
+        x1=x2;
+        x2=x;
+    }printf ("\nJumlah Bilangan Fibonacci tersebut = %d ", jml);
+}
